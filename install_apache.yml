@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update respository index
+    yum:
+      update_cache: yes
+
+  - name: install http package
+    yum:
+      name: httpd
